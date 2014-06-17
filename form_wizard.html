@@ -1,0 +1,2821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Health Promise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- Font Awesome -->
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	
+	<!-- Pace -->
+	<link href="css/pace.css" rel="stylesheet">
+	
+	<!-- Endless -->
+	<link href="css/endless.min.css" rel="stylesheet">
+	<link href="css/endless-skin.css" rel="stylesheet">
+	
+  </head>
+
+  <body class="overflow-hidden">
+	<!-- Overlay Div -->
+	<div id="overlay" class="transparent"></div>
+
+	<a href="" id="theme-setting-icon"><i class="fa fa-cog fa-lg"></i></a>
+	<div id="theme-setting">
+		<div class="title">
+			<strong class="no-margin">Skin Color</strong>
+		</div>
+		<div class="theme-box">
+			<a class="theme-color" style="background:#323447" id="default"></a>
+			<a class="theme-color" style="background:#efefef" id="skin-1"></a>
+			<a class="theme-color" style="background:#a93922" id="skin-2"></a>
+			<a class="theme-color" style="background:#3e6b96" id="skin-3"></a>
+			<a class="theme-color" style="background:#635247" id="skin-4"></a>
+			<a class="theme-color" style="background:#3a3a3a" id="skin-5"></a>
+			<a class="theme-color" style="background:#495B6C" id="skin-6"></a>
+		</div>
+		<div class="title">
+			<strong class="no-margin">Sidebar Menu</strong>
+		</div>
+		<div class="theme-box">
+			<label class="label-checkbox">
+				<input type="checkbox" checked id="fixedSidebar">
+				<span class="custom-checkbox"></span>
+				Fixed Sidebar
+			</label>
+		</div>
+	</div><!-- /theme-setting -->
+	
+	<div id="wrapper" class="preload">
+		<div id="top-nav" class="skin-6 fixed">
+			<div class="brand">
+				<span>Health</span>
+				<span class="text-toggle"> Promise</span>
+			</div><!-- /brand -->
+			<button type="button" class="navbar-toggle pull-left" id="sidebarToggle">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<ul class="nav-notification clearfix">
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="fa fa-envelope fa-lg"></i>
+						<span class="notification-label bounceIn animation-delay4">7</span>
+					</a>
+					<ul class="dropdown-menu message dropdown-1">
+						<li><a>You have 4 new unread messages</a></li>					  
+						<li>
+							<a class="clearfix" href="#">
+								<img src="img/user.jpg" alt="User Avatar">
+								<div class="detail">
+									<strong>John Doe</strong>
+									<p class="no-margin">
+										Lorem ipsum dolor sit amet...
+									</p>
+									<small class="text-muted"><i class="fa fa-check text-success"></i> 27m ago</small>
+								</div>
+							</a>	
+						</li>
+						<li>
+							<a class="clearfix" href="#">
+								<img src="img/user2.jpg" alt="User Avatar">
+								<div class="detail">
+									<strong>Jane Doe</strong>
+									<p class="no-margin">
+										Lorem ipsum dolor sit amet...
+									</p>
+									<small class="text-muted"><i class="fa fa-check text-success"></i> 5hr ago</small>
+								</div>
+							</a>	
+						</li>
+						<li>
+							<a class="clearfix" href="#">
+								<img src="img/user.jpg" alt="User Avatar">
+								<div class="detail">
+									<strong>Bill Doe</strong>
+									<p class="no-margin">
+										Lorem ipsum dolor sit amet...
+									</p>
+									<small class="text-muted"><i class="fa fa-reply"></i> Yesterday</small>
+								</div>
+							</a>	
+						</li>
+						<li>
+							<a class="clearfix" href="#">
+								<img src="img/user2.jpg" alt="User Avatar">
+								<div class="detail">
+									<strong>Baby Doe</strong>
+									<p class="no-margin">
+										Lorem ipsum dolor sit amet...
+									</p>
+									<small class="text-muted"><i class="fa fa-reply"></i> 9 Feb 2013</small>
+								</div>
+							</a>	
+						</li>
+						<li><a href="#">View all messages</a></li>					  
+					</ul>
+				</li>
+				<li class="dropdown hidden-xs">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="fa fa-tasks fa-lg"></i>
+						<span class="notification-label bounceIn animation-delay5">4</span>
+					</a>
+					<ul class="dropdown-menu task dropdown-2">
+						<li><a href="#">You have 4 tasks to complete</a></li>					  
+						<li>
+							<a href="#">
+								<div class="clearfix">
+									<span class="pull-left">Bug Fixes</span>
+									<small class="pull-right text-muted">78%</small>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" style="width:78%"></div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="clearfix">
+									<span class="pull-left">Software Updating</span>
+									<small class="pull-right text-muted">54%</small>
+								</div>
+								<div class="progress progress-striped">
+									<div class="progress-bar progress-bar-success" style="width:54%"></div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="clearfix">
+									<span class="pull-left">Database Migration</span>
+									<small class="pull-right text-muted">23%</small>
+								</div>
+								<div class="progress">
+									<div class="progress-bar progress-bar-warning" style="width:23%"></div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="clearfix">
+									<span class="pull-left">Unit Testing</span>
+									<small class="pull-right text-muted">92%</small>
+								</div>
+								<div class="progress progress-striped active">
+									<div class="progress-bar progress-bar-danger " style="width:92%"></div>
+								</div>
+							</a>
+						</li>
+						<li><a href="#">View all tasks</a></li>					  
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<i class="fa fa-bell fa-lg"></i>
+						<span class="notification-label bounceIn animation-delay6">5</span>
+					</a>
+					<ul class="dropdown-menu notification dropdown-3">
+						<li><a href="#">You have 5 new notifications</a></li>					  
+						<li>
+							<a href="#">
+								<span class="notification-icon bg-warning">
+									<i class="fa fa-warning"></i>
+								</span>
+								<span class="m-left-xs">Server #2 not responding.</span>
+								<span class="time text-muted">Just now</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="notification-icon bg-success">
+									<i class="fa fa-plus"></i>
+								</span>
+								<span class="m-left-xs">New user registration.</span>
+								<span class="time text-muted">2m ago</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="notification-icon bg-danger">
+									<i class="fa fa-bolt"></i>
+								</span>
+								<span class="m-left-xs">Application error.</span>
+								<span class="time text-muted">5m ago</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="notification-icon bg-success">
+									<i class="fa fa-usd"></i>
+								</span>
+								<span class="m-left-xs">2 items sold.</span>
+								<span class="time text-muted">1hr ago</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="notification-icon bg-success">
+									<i class="fa fa-plus"></i>
+								</span>
+								<span class="m-left-xs">New user registration.</span>
+								<span class="time text-muted">1hr ago</span>
+							</a>
+						</li>
+						<li><a href="#">View all notifications</a></li>					  
+					</ul>
+				</li>
+				<li class="profile dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+						<strong>John Doe</strong>
+						<span><i class="fa fa-chevron-down"></i></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a class="clearfix" href="#">
+								<img src="img/user.jpg" alt="User Avatar">
+								<div class="detail">
+									<strong>John Doe</strong>
+									<p class="grey">John_Doe@email.com</p> 
+								</div>
+							</a>
+						</li>
+						<li><a tabindex="-1" href="profile.html" class="main-link"><i class="fa fa-edit fa-lg"></i> Edit profile</a></li>
+						<li><a tabindex="-1" href="gallery.html" class="main-link"><i class="fa fa-picture-o fa-lg"></i> Photo Gallery</a></li>
+						<li><a tabindex="-1" href="#" class="theme-setting"><i class="fa fa-cog fa-lg"></i> Setting</a></li>
+						<li class="divider"></li>
+						<li><a tabindex="-1" class="main-link logoutConfirm_open" href="#logoutConfirm"><i class="fa fa-lock fa-lg"></i> Log out</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div><!-- /top-nav-->
+
+
+		<div id="main-container">
+			<div class="padding-md">
+
+
+				
+				<hr>
+				<div class="panel panel-default">
+					<form class="form-horizontal no-margin form-border" id="formWizard1" novalidate>
+						<div class="panel-heading">
+							Health Promise Questionaire
+						</div>
+						<div class="panel-tab">
+							<ul class="wizard-steps wizard-demo" id="wizardDemo1"> 
+								<li class="active">
+									<a href="#wizardContent1" data-toggle="tab">SIBDQ</a>
+								</li> 
+								<li>
+									<a href="#wizardContent2" data-toggle="tab">EQ-5D</a>
+								</li> 
+								<li>
+									<a href="#wizardContent3" data-toggle="tab">PAM</a>
+								</li>
+                                <li>
+                                    <a href="#wizardContent4" data-toggle="tab">eHeals</a>
+                                </li>
+                                <li>
+                                    <a href="#wizardContent5" data-toggle="tab">Socio Demographics</a>
+                                </li>
+                                <li>
+                                    <a href="#wizardContent6" data-toggle="tab">Language</a>
+                                </li>
+                                <li>
+                                    <a href="#wizardContent7" data-toggle="tab">Computer Use</a>
+                                </li>
+                                <li>
+                                    <a href="#wizardContent8" data-toggle="tab">Quality Indicators</a>
+                                </li>
+                                <li>
+                                    <a href="#wizardContent9" data-toggle="tab">Done</a>
+                                </li>
+							</ul>
+						</div>
+
+                        <!-- Wizard start here -->
+						<div class="panel-body">
+
+                            <!-- Tab content 1 here -->
+							<div class="tab-content">
+								<div class="tab-pane fade in active" id="wizardContent1">
+
+                                    <!-- Each form group is a set of questions -->
+                                    <div class="form-group">
+
+                                        <!-- Question 1 -->
+                                        <label class="col-lg-2 control-label">
+                                            How often has the feeling of fatigue or of being tired and worn out been a problem
+                                            for you during the last 2 weeks?  Choose an option from:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q1" value="1" id="q1answ1">
+                                                <span class="custom-radio"></span>
+                                                All of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q1" value="2" id="q1answ2">
+                                                <span class="custom-radio"></span>
+                                                Most of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q1" value="3" id="q1answ3">
+                                                <span class="custom-radio"></span>
+                                                A good bit of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q1" value="4" id="q1answ4">
+                                                <span class="custom-radio"></span>
+                                                Some of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q1" value="5" id="q1answ5">
+                                                <span class="custom-radio"></span>
+                                                A little of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q1" value="6" id="q1answ6">
+                                                <span class="custom-radio"></span>
+                                                Hardly any of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q1" value="7" id="q1answ7">
+                                                <span class="custom-radio"></span>
+                                                None of the time
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 2 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            How often during the last 2 weeks have you had to delay or cancel a social engagement because your
+                                            bowel problem?  Choose an option from:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q2"  value="1" id="q2answ1">
+                                                <span class="custom-radio"></span>
+                                                All of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q2"  value="2" id="q2answ2">
+                                                <span class="custom-radio"></span>
+                                                Most of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q2"  value="3" id="q2answ3">
+                                                <span class="custom-radio"></span>
+                                                A good bit of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q2"  value="4" id="q2answ4">
+                                                <span class="custom-radio"></span>
+                                                Some of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q2"  value="5" id="q2answ5">
+                                                <span class="custom-radio"></span>
+                                                A little of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q2"  value="6" id="q2answ6">
+                                                <span class="custom-radio"></span>
+                                                Hardly any of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q2"  value="7" id="q2answ7">
+                                                <span class="custom-radio"></span>
+                                                None of the time
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 3 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            How much difficulty have you had, as a result of your bowel problems, doing leisure
+                                            or sports activities you would have liked to have done during the last 2 weeks? Choose an option from:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q3" value="1" id="q3answ1">
+                                                <span class="custom-radio"></span>
+                                                A great deal of difficulty, activities made impossible
+                                            </label>
+                                            <label class="label-radio">
+                                                <input type="radio" name="q3" value="2" id="q3answ2">
+                                                <span class="custom-radio"></span>
+                                                A lot of difficulty
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q3"  value="3" id="q3answ3">
+                                                <span class="custom-radio"></span>
+                                                A fair bit of difficulty
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q3"  value="4" id="q3answ4">
+                                                <span class="custom-radio"></span>
+                                                Some difficulty
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q3"  value="5" id="q3answ5">
+                                                <span class="custom-radio"></span>
+                                                A little difficulty
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q3"  value="6" id="q3answ6">
+                                                <span class="custom-radio"></span>
+                                                Hardly any difficulty
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q3"  value="7" id="q3answ7">
+                                                <span class="custom-radio"></span>
+                                                No difficulty; the bowel problems did not limit sports or leisure activities
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Quesrtion 4 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            How often during the last 2 weeks have you been troubled by pain in the abdomen?  Choose an option from:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q4  value="1" id="q4answ1">
+                                                <span class="custom-radio"></span>
+                                                All of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q4"  value="2" id="q4answ2">
+                                                <span class="custom-radio"></span>
+                                                Most of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q4"  value="3" id="q4answ3">
+                                                <span class="custom-radio"></span>
+                                                A good bit of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q4"  value="4" id="q4answ4">
+                                                <span class="custom-radio"></span>
+                                                Some of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q4"  value="5" id="q4answ5">
+                                                <span class="custom-radio"></span>
+                                                A little of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q4"  value="6" id="q4answ6">
+                                                <span class="custom-radio"></span>
+                                                Hardly any of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q4"  value="7" id="q4answ7">
+                                                <span class="custom-radio"></span>
+                                                None of the time
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+
+                                    </div><!-- /form-group -->
+
+
+                                    <!-- Question 5 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            How often during the 2 last 2 weeks have you felt depressed or discouraged?  Choose an option from:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q5" value="1" id="q5answ1">
+                                                <span class="custom-radio"></span>
+                                                All of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q5" value="2" id="q5answ2">
+                                                <span class="custom-radio"></span>
+                                                Most of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q5" value="3" id="q5answ3">
+                                                <span class="custom-radio"></span>
+                                                A good bit of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q5" value="4" id="q5answ4">
+                                                <span class="custom-radio"></span>
+                                                Some of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q5"  value="5" id="q5answ5">
+                                                <span class="custom-radio"></span>
+                                                A little of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q5" value="6" id="q5answ6">
+                                                <span class="custom-radio"></span>
+                                                Hardly any of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q5" value="7" id="q5answ7">
+                                                <span class="custom-radio"></span>
+                                                None of the time
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+
+                                    </div><!-- /form-group -->
+
+
+                                    <!-- Question 6 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Overall, in the last 2 weeks, how much of a problem have you had with passing large amounts of gas?  Choose an option from:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q6" value="1" id="q6answ1">
+                                                <span class="custom-radio"></span>
+                                                A major problem
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q6" value="2" id="q6answ2">
+                                                <span class="custom-radio"></span>
+                                                A big problem
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q6" value="3" id="q6answ3">
+                                                <span class="custom-radio"></span>
+                                                A significant problem
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q6" value="4" id="q6answ4">
+                                                <span class="custom-radio"></span>
+                                                Some trouble
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q6" value="5" id="q6answ5">
+                                                <span class="custom-radio"></span>
+                                                A little trouble
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q6" value="6" id="q6answ6">
+                                                <span class="custom-radio"></span>
+                                                Hardly any trouble
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q6" value="7" id="q6answ7">
+                                                <span class="custom-radio"></span>
+                                                No trouble
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 7 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Overall, in the last 2 weeks, how much of a problem have you had maintaining or getting to the weight you would like to be?  Choose an option from:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q7">
+                                                <span class="custom-radio"></span>
+                                                A major problem
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q7">
+                                                <span class="custom-radio"></span>
+                                                A big problem
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q7">
+                                                <span class="custom-radio"></span>
+                                                A significant problem
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q7">
+                                                <span class="custom-radio"></span>
+                                                Some trouble
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q7">
+                                                <span class="custom-radio"></span>
+                                                A little trouble
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q7">
+                                                <span class="custom-radio"></span>
+                                                Hardly any trouble
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q7">
+                                                <span class="custom-radio"></span>
+                                                None of the time
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 8 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            How often during the last 2 weeks have you felt relaxed and free of tension?  Choose an option from:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q8">
+                                                <span class="custom-radio"></span>
+                                                None of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q8">
+                                                <span class="custom-radio"></span>
+                                                A little of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q8">
+                                                <span class="custom-radio"></span>
+                                                Some of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q8">
+                                                <span class="custom-radio"></span>
+                                                A good bit of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q8">
+                                                <span class="custom-radio"></span>
+                                                Most of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q8">
+                                                <span class="custom-radio"></span>
+                                                Almost all of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q8">
+                                                <span class="custom-radio"></span>
+                                                All of the time
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 9 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            How often during the last 2 weeks have you felt relaxed and free of tension?  Choose an option from:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q9">
+                                                <span class="custom-radio"></span>
+                                                None of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q9">
+                                                <span class="custom-radio"></span>
+                                                A little of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q9">
+                                                <span class="custom-radio"></span>
+                                                Some of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q9">
+                                                <span class="custom-radio"></span>
+                                                A good bit of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q9">
+                                                <span class="custom-radio"></span>
+                                                Most of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q9">
+                                                <span class="custom-radio"></span>
+                                                Almost all of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q9">
+                                                <span class="custom-radio"></span>
+                                                All of the time
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+
+                                    </div><!-- /form-group -->
+
+
+                                    <!-- Question 10 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            How much of the time during the last 2 weeks have you been troubled by a feeling of
+                                            having to go to the bathroom even though your bowels were empty?  Choose an option from:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q10">
+                                                <span class="custom-radio"></span>
+                                                All of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q10">
+                                                <span class="custom-radio"></span>
+                                                Most of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q10">
+                                                <span class="custom-radio"></span>
+                                                A good bit of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q10">
+                                                <span class="custom-radio"></span>
+                                                Some of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q10">
+                                                <span class="custom-radio"></span>
+                                                A little of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q10">
+                                                <span class="custom-radio"></span>
+                                                Hardly any of the time
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q10">
+                                                <span class="custom-radio"></span>
+                                                None of the time
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+
+                                    </div><!-- /form-group -->
+
+
+								</div>
+                                <!-- /Tab content 1 -->
+
+
+
+                                <!-- Tab content 2 -->
+								<div class="tab-pane fade" id="wizardContent2">
+
+                                    <!-- Question 11 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Mobility?  Choose an option from:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q12">
+                                                <span class="custom-radio"></span>
+                                                I have no problems in walking about
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q12">
+                                                <span class="custom-radio"></span>
+                                                I have slight problems in walking about
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q12">
+                                                <span class="custom-radio"></span>
+                                                I have some problems in walking about
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q12">
+                                                <span class="custom-radio"></span>
+                                                I have some severe problems in walking about
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q12">
+                                                <span class="custom-radio"></span>
+                                                I am confined to bed
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 12 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Self-Care?  Choose an option from:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q13">
+                                                <span class="custom-radio"></span>
+                                                I have no problems with self-care
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q13">
+                                                <span class="custom-radio"></span>
+                                                I have slight problems washing or dressing myself
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q13">
+                                                <span class="custom-radio"></span>
+                                                I have some problems washing or dressing myself
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q13">
+                                                <span class="custom-radio"></span>
+                                                I have some severe problems washing or dressing myself
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q13">
+                                                <span class="custom-radio"></span>
+                                                I am unable to wash or dress myself
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 13 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Usual Activites?  Choose an option from:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q14">
+                                                <span class="custom-radio"></span>
+                                                I have no problems with performing my usual activities
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q14">
+                                                <span class="custom-radio"></span>
+                                                I have slight problems with performing my usual activities
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q14">
+                                                <span class="custom-radio"></span>
+                                                I have some problems with performing my usual activities
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q14">
+                                                <span class="custom-radio"></span>
+                                                I have some severe problems with performing my usual activities
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q14">
+                                                <span class="custom-radio"></span>
+                                                I am unable to perform my usual activities
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 14 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Pain/Discomfort  Choose an option from:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q15">
+                                                <span class="custom-radio"></span>
+                                                I have no pain or discomfort
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q15">
+                                                <span class="custom-radio"></span>
+                                                I have slight pain or discomfort
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q15">
+                                                <span class="custom-radio"></span>
+                                                I have moderate pain or discomfort
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q15">
+                                                <span class="custom-radio"></span>
+                                                I have some severe pain or discomfort
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q15">
+                                                <span class="custom-radio"></span>
+                                                I have extreme pain or discomfort
+                                            </label>
+                                        </div><!-- /.col -->
+                                     </div>
+
+                                        <!-- Question 15 -->
+                                        <div class="form-group">
+
+                                            <label class="col-lg-2 control-label">
+                                                Anxiety/Depression  Choose an option from:
+                                            </label>
+                                            <div class="col-lg-10">
+
+                                                <label class="label-radio">
+                                                    <input type="radio" name="q16">
+                                                    <span class="custom-radio"></span>
+                                                    I am not anxious or depressed
+                                                </label>
+                                                <label class="label-checkbox">
+                                                    <input type="radio" name="q16">
+                                                    <span class="custom-radio"></span>
+                                                    I am slightly anxious or depressed
+                                                </label>
+                                                <label class="label-checkbox">
+                                                    <input type="radio" name="q16">
+                                                    <span class="custom-radio"></span>
+                                                    I am moderately anxious or depressed
+                                                </label>
+                                                <label class="label-checkbox">
+                                                    <input type="radio" name="q16">
+                                                    <span class="custom-radio"></span>
+                                                    I am severely anxious or depressed
+                                                </label>
+                                                <label class="label-checkbox">
+                                                    <input type="radio" name="q16">
+                                                    <span class="custom-radio"></span>
+                                                    I am extremely anxious or depressed
+                                                </label>
+                                            </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+								</div>
+                                <!--/Tab content 2-->
+
+                                <!-- Tab content 3 -->
+                                <div class="tab-pane fade" id="wizardContent3">
+
+                                    <!-- Question 16 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            When all is said and done, I am the person who is responsible for taking care of my health:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q17">
+                                                <span class="custom-radio"></span>
+                                                Disagree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q17">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q17">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q17">
+                                                <span class="custom-radio"></span>
+                                                Agree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q17">
+                                                <span class="custom-radio"></span>
+                                                N/A
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 17 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Taking an active role in my own health care is the most important thing that affects my health and ability to function:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q18">
+                                                <span class="custom-radio"></span>
+                                                Disagree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q18">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q18">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q18">
+                                                <span class="custom-radio"></span>
+                                                Agree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q18">
+                                                <span class="custom-radio"></span>
+                                                N/A
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+
+                                    <!-- Question 18 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I am confident I can help prevent or reduce problems associated with my health condition:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q20">
+                                                <span class="custom-radio"></span>
+                                                Disagree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q20">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q20">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q21">
+                                                <span class="custom-radio"></span>
+                                                Agree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q23">
+                                                <span class="custom-radio"></span>
+                                                N/A
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 19 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I know what each of my prescribed medicines do:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q24">
+                                                <span class="custom-radio"></span>
+                                                Disagree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q25">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q25">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q25">
+                                                <span class="custom-radio"></span>
+                                                Agree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q25">
+                                                <span class="custom-radio"></span>
+                                                N/A
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 20 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I am confident that I can tell when I need to go get medical care and when I can handle a health problem myself:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q26">
+                                                <span class="custom-radio"></span>
+                                                Disagree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q26">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q26">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q26">
+                                                <span class="custom-radio"></span>
+                                                Agree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q26">
+                                                <span class="custom-radio"></span>
+                                                N/A
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 21 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I am confident that I can tell my health care provider concerns I have even when he or she does not ask.
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Disagree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Agree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                N/A
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 21 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I am confident that I can follow through on medical treatments I need to do at home:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Disagree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Agree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                N/A
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 21 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I understand health problem(s) and what causes them:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Disagree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Agree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                N/A
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 21 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I know how to prevent problems with my health:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Disagree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Agree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                N/A
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 21 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I am confident I can figure out solutions when new situations or problems arise with my health condition:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Disagree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Agree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                N/A
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+
+                                    <!-- Question 21 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I am confident that I can maintain liefstyle changes like diet and exercise even during times of stress:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Disagree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                Agree Strongly
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q27">
+                                                <span class="custom-radio"></span>
+                                                N/A
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                </div>
+                                <!--/Tab content 3-->
+
+                                <!-- Tab content 4 -->
+                                <div class="tab-pane fade" id="wizardContent4">
+
+                                    <!-- Question 22 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I know how to find helpful health resources on the internet:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q28">
+                                                <span class="custom-radio"></span>
+                                                Strongly Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q28">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q28">
+                                                <span class="custom-radio"></span>
+                                                Neither Agree nor Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q28">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q28">
+                                                <span class="custom-radio"></span>
+                                                Strongly Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q28">
+                                                <span class="custom-radio"></span>
+                                                Not Applicable
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 23 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I know how to use the internet to answer my health questions:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q29">
+                                                <span class="custom-radio"></span>
+                                                Strongly Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q29">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q29">
+                                                <span class="custom-radio"></span>
+                                                Neither Agree nor Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q29">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q29">
+                                                <span class="custom-radio"></span>
+                                                Strongly Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q29">
+                                                <span class="custom-radio"></span>
+                                                Not Applicable
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 24 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I know what health resources are available on the internet:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q30">
+                                                <span class="custom-radio"></span>
+                                                Strongly Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q30">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q30">
+                                                <span class="custom-radio"></span>
+                                                Neither Agree nor Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q30">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q30">
+                                                <span class="custom-radio"></span>
+                                                Strongly Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q30">
+                                                <span class="custom-radio"></span>
+                                                Not Applicable
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+
+                                    <!-- Question 25 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I know where to find helpful resources on the internet:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q31">
+                                                <span class="custom-radio"></span>
+                                                Strongly Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q31">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q31">
+                                                <span class="custom-radio"></span>
+                                                Neither Agree nor Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q31">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q31">
+                                                <span class="custom-radio"></span>
+                                                Strongly Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q31">
+                                                <span class="custom-radio"></span>
+                                                Not Applicable
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 26 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I know how to use the health information I find on the internet to help me:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q32">
+                                                <span class="custom-radio"></span>
+                                                Strongly Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q32">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q32">
+                                                <span class="custom-radio"></span>
+                                                Neither Agree nor Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q32">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q32">
+                                                <span class="custom-radio"></span>
+                                                Strongly Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q32">
+                                                <span class="custom-radio"></span>
+                                                Not Applicable
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 27 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I have the skills I need to evaluate the health resource I find on the internet:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q33">
+                                                <span class="custom-radio"></span>
+                                                Strongly Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q33">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q33">
+                                                <span class="custom-radio"></span>
+                                                Neither Agree nor Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q33">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q33">
+                                                <span class="custom-radio"></span>
+                                                Strongly Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q33">
+                                                <span class="custom-radio"></span>
+                                                Not Applicable
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+
+                                    <!-- Question 28 -->
+                                    <div class="form-group">
+
+                                         <label class="col-lg-2 control-label">
+                                            I can tell high quality form low quality health resources on the internet:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q34">
+                                                <span class="custom-radio"></span>
+                                                Strongly Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q34">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q34">
+                                                <span class="custom-radio"></span>
+                                                Neither Agree nor Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q34">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q34">
+                                                <span class="custom-radio"></span>
+                                                Strongly Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q34">
+                                                <span class="custom-radio"></span>
+                                                Not Applicable
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 29 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I feel confident in using information from the internet to make health decisions:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q35">
+                                                <span class="custom-radio"></span>
+                                                Strongly Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q35">
+                                                <span class="custom-radio"></span>
+                                                Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q35">
+                                                <span class="custom-radio"></span>
+                                                Neither Agree nor Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q35">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q35">
+                                                <span class="custom-radio"></span>
+                                                Strongly Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q35">
+                                                <span class="custom-radio"></span>
+                                                Not Applicable
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+
+                                </div>
+                                <!--/Tab content 4-->
+
+                                <!-- Tab content 5 -->
+                                <div class="tab-pane fade" id="wizardContent5">
+                                    <!-- Question 30 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Indicate Gender:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q36">
+                                                <span class="custom-radio"></span>
+                                                Male
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q36">
+                                                <span class="custom-radio"></span>
+                                                Female
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 31 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Indicate your age
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="text" name="q36">
+                                                <span class="custom-radio"></span>
+                                                Age
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+
+                                    <!-- Question 32 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Do you consider yourself Hispanic/Latino?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q37">
+                                                <span class="custom-radio"></span>
+                                                No
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q37">
+                                                <span class="custom-radio"></span>
+                                                Yes
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 33 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            What race do you consider yourself to be?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q38">
+                                                <span class="custom-radio"></span>
+                                                Black or African-American
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q38">
+                                                <span class="custom-radio"></span>
+                                                White or Caucasian
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q38">
+                                                <span class="custom-radio"></span>
+                                                Native American or Alaskan
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q38">
+                                                <span class="custom-radio"></span>
+                                                Asian or Pacific Islander
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q38">
+                                                <span class="custom-radio"></span>
+                                                South Asian
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q38">
+                                                <span class="custom-radio"></span>
+                                                Other Specify:
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 34 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            What is the highest grade or level of school that you have completed?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q39">
+                                                <span class="custom-radio"></span>
+                                                8th Grade or less
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q39">
+                                                <span class="custom-radio"></span>
+                                                Some High School but did not graduate
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q39">
+                                                <span class="custom-radio"></span>
+                                                High School or GED
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q39">
+                                                <span class="custom-radio"></span>
+                                                1 to 3 years of College
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q39">
+                                                <span class="custom-radio"></span>
+                                                4-year college graduate or higher degree
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            What is [your/you and your spouse's] total annual income, including money from a job,
+                                            pension, Social Security, SSI or any other source?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q40">
+                                                <span class="custom-radio"></span>
+                                                $10,000 or less
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q40">
+                                                <span class="custom-radio"></span>
+                                                $10,001 to $20,000
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q40">
+                                                <span class="custom-radio"></span>
+                                                $20,001 to $35,000
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q40">
+                                                <span class="custom-radio"></span>
+                                                $35,001 to $50,000
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q40">
+                                                <span class="custom-radio"></span>
+                                                $50,001 to $100,000
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q40">
+                                                <span class="custom-radio"></span>
+                                                $100,001 or more
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q40">
+                                                <span class="custom-radio"></span>
+                                                Don't Know
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q40">
+                                                <span class="custom-radio"></span>
+                                                Refused
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+
+                                </div>
+                                <!--/Tab content 5-->
+
+                                <!-- Tab content 6 -->
+                                <div class="tab-pane fade" id="wizardContent6">
+
+                                    <!-- Question 36 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Is Englis your primary language?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q41">
+                                                <span class="custom-radio"></span>
+                                                Yes
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q41">
+                                                <span class="custom-radio"></span>
+                                                No
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 37 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            How would you describe your ability to speak and understand English? Would you say it's:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q42">
+                                                <span class="custom-radio"></span>
+                                                Very Poor
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q42">
+                                                <span class="custom-radio"></span>
+                                                Poor Fair
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q42">
+                                                <span class="custom-radio"></span>
+                                                Good Very Good
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q42">
+                                                <span class="custom-radio"></span>
+                                                Excellent
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                </div>
+                                <!--/Tab content 6-->
+
+                                <!-- Tab content 7 -->
+                                <div class="tab-pane fade" id="wizardContent7">
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            How often do you use computer at home, workplace or library?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q43">
+                                                <span class="custom-radio"></span>
+                                                Everyday
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q43">
+                                                <span class="custom-radio"></span>
+                                                Every 2-3 days
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q43">
+                                                <span class="custom-radio"></span>
+                                                Once a week
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q43">
+                                                <span class="custom-radio"></span>
+                                                More than once a month
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q43">
+                                                <span class="custom-radio"></span>
+                                                Less than once a month
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q43">
+                                                <span class="custom-radio"></span>
+                                                Less than once a month
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q43">
+                                                <span class="custom-radio"></span>
+                                                Never
+                                            </label>
+                                        </div><!-- /.col -->
+
+
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Do you have access to internet at home or workplace?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q44">
+                                                <span class="custom-radio"></span>
+                                                Yes
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q44">
+                                                <span class="custom-radio"></span>
+                                                No
+                                            </label>
+                                        </div><!-- /.col -->
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Do you own a computer at home?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q45">
+                                                <span class="custom-radio"></span>
+                                                Yes
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q45">
+                                                <span class="custom-radio"></span>
+                                                No
+                                            </label>
+                                        </div><!-- /.col -->
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Do you own a Smartphone or Touch-Tablet (such as iPad)?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q46">
+                                                <span class="custom-radio"></span>
+                                                Yes
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q46">
+                                                <span class="custom-radio"></span>
+                                                No
+                                            </label>
+                                        </div><!-- /.col -->
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            How often do you use Apps on your Smartphone or Touch-Tablet?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q47">
+                                                <span class="custom-radio"></span>
+                                                Everyday
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q"47>
+                                                <span class="custom-radio"></span>
+                                                Every 2-3 days
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q"47>
+                                                <span class="custom-radio"></span>
+                                                Once a week
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q"47>
+                                                <span class="custom-radio"></span>
+                                                More than once a month
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q"47>
+                                                <span class="custom-radio"></span>
+                                                Less than once a month
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q"47>
+                                                <span class="custom-radio"></span>
+                                                Never
+                                            </label>
+                                        </div><!-- /.col -->
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I can tell high quality from low quality health resources on the internet
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q48">
+                                                <span class="custom-radio"></span>
+                                                Strongly Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q48">
+                                                <span class="custom-radio"></span>
+                                               Disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q48">
+                                                <span class="custom-radio"></span>
+                                                Neither agree nor disagree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q48">
+                                                <span class="custom-radio"></span>
+                                                Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q48">
+                                                <span class="custom-radio"></span>
+                                                Strongly Agree
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q48">
+                                                <span class="custom-radio"></span>
+                                                Not applicable
+                                            </label>
+                                        </div><!-- /.col -->
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I feel confident in using information from the internet to make health decisions.
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q49">
+                                                <span class="custom-radio"></span>
+                                                Yes
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q49">
+                                                <span class="custom-radio"></span>
+                                                No
+                                            </label>
+                                        </div><!-- /.col -->
+                                    </div><!-- /form-group -->
+
+                                </div>
+                                <!--/Tab content 7-->
+
+                                <!-- Tab content 8 -->
+                                <div class="tab-pane fade" id="wizardContent8">
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            For UC patients only, I have been informed my disease  is:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q50">
+                                                <span class="custom-radio"></span>
+                                                Proctitis (involving rectum only)
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q50">
+                                                <span class="custom-radio"></span>
+                                                Limited colitis (involving rectum, sigmoid, and descending colon)
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q50">
+                                                <span class="custom-radio"></span>
+                                                Extensive colitis (extending into transverse colon or beyond)
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            For Crohn's patients only, check all that apply: I have:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q51">
+                                                <span class="custom-radio"></span>
+                                                Internal fistutlas (abnormal connection from bowel to bowel/skin/other organs)
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q51">
+                                                <span class="custom-radio"></span>
+                                                Strictures (narrowing of bowel)
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q51">
+                                                <span class="custom-radio"></span>
+                                                Perianal fistulas (abnormal opening around the rectum/perianal-groin area)
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q51">
+                                                <span class="custom-radio"></span>
+                                                Neither strictures nor internal fisula
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            My IBD over the last six months is
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q52">
+                                                <span class="custom-radio"></span>
+                                                Constantly avtive
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q52">
+                                                <span class="custom-radio"></span>
+                                                Giving symptoms everyday
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q52">
+                                                <span class="custom-radio"></span>
+                                                Often active (most days)
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q52">
+                                                <span class="custom-radio"></span>
+                                                Sometimes active (some days)
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q52">
+                                                <span class="custom-radio"></span>
+                                                Occasionally active (1-2 days per months)
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q52">
+                                                <span class="custom-radio"></span>
+                                                Well in the past six months
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I am currently taking oral steroids and:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q53">
+                                                <span class="custom-radio"></span>
+                                                Was started on immunomodulators/biologics (Remicaide, Cimzia, Humira, Sympony, Stellara, Entyvio) to decrease my dependency on steroids
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q53">
+                                                <span class="custom-radio"></span>
+                                                Have not been started on immunomodulators/biologics
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Bone loss Assessment: Only for patients who have taken oral steroids for more 90 days total dufing life time or who have other
+                                            risk factors for low bone density (Hereditary, smoking, hip fractures)
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q54">
+                                                <span class="custom-radio"></span>
+                                                I have been screened for low bone density (DEXA)
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q54">
+                                                <span class="custom-radio"></span>
+                                                I have not been screened for low bone density (DEXA)
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Have tou recieved the influenza vaccine this past winter?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q55">
+                                                <span class="custom-radio"></span>
+                                                Yes, I have
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q55">
+                                                <span class="custom-radio"></span>
+                                                No, I have not
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Have you received the pneumonia vaccine in the past 5 years?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q56">
+                                                <span class="custom-radio"></span>
+                                                Yes, I have
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q56">
+                                                <span class="custom-radio"></span>
+                                                No, I have not
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Vaccines: HPV: TBD
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q57">
+                                                <span class="custom-radio"></span>
+                                                Yes, I have
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q57">
+                                                <span class="custom-radio"></span>
+                                                No, I have not
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            For patients on biologics only (Remicaide, Cimzia, Humira, Sympony, Stellara, Entyvio),
+                                            Have you been tested for Tuberculosis using skin or blood test before taking biologics?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q58">
+                                                <span class="custom-radio"></span>
+                                                Yes, I have been tested
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q58">
+                                                <span class="custom-radio"></span>
+                                                No, I have not been tested
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Have you been tested for Hepatitis B virus before taking biologics?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q58">
+                                                <span class="custom-radio"></span>
+                                                Yes, I have been tested
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q58">
+                                                <span class="custom-radio"></span>
+                                                No, I have not been tested
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            For patients who currently smoke, have you been screened tobacco use?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q59">
+                                                <span class="custom-radio"></span>
+                                                Yes
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q59">
+                                                <span class="custom-radio"></span>
+                                                No
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Have you been offered cessation(quitting) guidance?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q60">
+                                                <span class="custom-radio"></span>
+                                                Yes
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q60">
+                                                <span class="custom-radio"></span>
+                                                No
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            For patients with more than 8 years of colitis (Crohn's or Ulcerative Colitis), have you recieved colon cancer screening by colonoscopy in the last two years?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q61">
+                                                <span class="custom-radio"></span>
+                                                Yes
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q61">
+                                                <span class="custom-radio"></span>
+                                                No
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Cancer prevention: Pap Smear: TBD
+
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q62">
+                                                <span class="custom-radio"></span>
+                                                Yes
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q62">
+                                                <span class="custom-radio"></span>
+                                                No
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Cancer Prevention: Skin protection: TBD
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q63">
+                                                <span class="custom-radio"></span>
+                                                Yes, I have been tested
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q63">
+                                                <span class="custom-radio"></span>
+                                                No, I have not been tested
+                                            </label>
+
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I have been informed that my inflammatory markers (CRPm WSRm Calprotectin) are in normal range?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q64">
+                                                <span class="custom-radio"></span>
+                                                Yes, normal range
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q64">
+                                                <span class="custom-radio"></span>
+                                                No, elevated
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q64">
+                                                <span class="custom-radio"></span>
+                                                I don't know
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I have been informed that my mucosa during endoscopy/colonoscopy is normal:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q65">
+                                                <span class="custom-radio"></span>
+                                                Yes, normal
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q65">
+                                                <span class="custom-radio"></span>
+                                                No, inflamed
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q65">
+                                                <span class="custom-radio"></span>
+                                                I don't know
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            I have been informed that my biopsy taken during colonoscopy does not show any inflammation:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q66">
+                                                <span class="custom-radio"></span>
+                                                Yes, normal
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q66">
+                                                <span class="custom-radio"></span>
+                                                No, inflamed
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q66">
+                                                <span class="custom-radio"></span>
+                                                I don't know
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                            Please tell us the number of days lost in 2013 from school/work that can be attributed to IBD:
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="text" name="q67">
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+
+                                    <!-- Question 35 -->
+                                    <div class="form-group">
+
+                                        <label class="col-lg-2 control-label">
+                                           If you are on 6MP/Mercaptopurine/Azathioprine, have you been tested for TPMT blood test to find the right dosage for you?
+                                        </label>
+                                        <div class="col-lg-10">
+
+                                            <label class="label-radio">
+                                                <input type="radio" name="q68">
+                                                <span class="custom-radio"></span>
+                                                Yes, I was tested
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q68">
+                                                <span class="custom-radio"></span>
+                                                No, I was not
+                                            </label>
+                                            <label class="label-checkbox">
+                                                <input type="radio" name="q68">
+                                                <span class="custom-radio"></span>
+                                                I don't know
+                                            </label>
+                                        </div><!-- /.col -->
+
+                                    </div><!-- /form-group -->
+
+
+
+                                </div>
+                                <!--/Tab content 8-->
+
+								<div class="tab-pane fade padding-md" id="wizardContent9">
+									<h4>Finish!</h4>
+								</div>
+							</div>
+
+						</div>
+						<div class="panel-footer clearfix">
+							<div class="pull-left">
+								<button class="btn btn-success btn-sm disabled" id="prevStep1" disabled>Previous</button>
+								<button type="submit" class="btn btn-sm btn-success" id="nextStep1">Next</button>
+							</div>
+
+							<div class="pull-right" style="width:30%">
+								<div class="progress progress-striped active m-top-sm m-bottom-none">
+									<div class="progress-bar progress-bar-success" id="wizardProgress" style="width:0%;">
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div><!-- /panel -->
+			</div><!-- /.padding-md -->
+		</div><!-- /main-container -->
+	</div><!-- /wrapper -->
+
+	<a href="" id="scroll-to-top" class="hidden-print"><i class="fa fa-chevron-up"></i></a>
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+	<!-- Jquery -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+
+	<!-- Bootstrap -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Parsley -->
+	<script src="js/parsley.min.js"></script>
+
+	<!-- Modernizr -->
+	<script src='js/modernizr.min.js'></script>
+
+	<!-- Pace -->
+	<script src='js/pace.min.js'></script>
+
+	<!-- Popup Overlay -->
+	<script src='js/jquery.popupoverlay.min.js'></script>
+
+	<!-- Slimscroll -->
+	<script src='js/jquery.slimscroll.min.js'></script>
+
+	<!-- Cookie -->
+	<script src='js/jquery.cookie.min.js'></script>
+
+	<!-- Endless -->
+	<script src="js/endless/endless_wizard.js"></script>
+	<script src="js/endless/endless.js"></script>
+	
+  </body>
+</html>
