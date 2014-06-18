@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="form_wizard.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="form_wizard.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/form_wizard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.44" vertical-offset="37763" max-vertical-offset="39240">
-              <caret line="2549" column="56" selection-start-line="2549" selection-start-column="56" selection-end-line="2549" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.9707887" vertical-offset="38078" max-vertical-offset="39330">
+              <caret line="2605" column="55" selection-start-line="2605" selection-start-column="55" selection-end-line="2605" selection-end-column="55" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -49,18 +49,18 @@
       <file leaf-file-name="register.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/register.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-88.125" vertical-offset="0" max-vertical-offset="2310">
-              <caret line="141" column="57" selection-start-line="141" selection-start-column="57" selection-end-line="141" selection-end-column="57" />
+            <state vertical-scroll-proportion="-28.875" vertical-offset="522" max-vertical-offset="2205">
+              <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="endless_wizard.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="endless_wizard.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/endless/endless_wizard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6518106" vertical-offset="3168" max-vertical-offset="4245">
-              <caret line="258" column="9" selection-start-line="258" selection-start-column="9" selection-end-line="258" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3183" max-vertical-offset="4260">
+              <caret line="272" column="30" selection-start-line="272" selection-start-column="30" selection-end-line="272" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -78,10 +78,10 @@
       <list>
         <option value="$PROJECT_DIR$/index.htm" />
         <option value="$PROJECT_DIR$/form_element.html" />
-        <option value="$PROJECT_DIR$/register.html" />
         <option value="$PROJECT_DIR$/css/endless.min.css" />
-        <option value="$PROJECT_DIR$/form_wizard.html" />
+        <option value="$PROJECT_DIR$/register.html" />
         <option value="$PROJECT_DIR$/js/endless/endless_wizard.js" />
+        <option value="$PROJECT_DIR$/form_wizard.html" />
       </list>
     </option>
   </component>
@@ -369,14 +369,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-88.125" vertical-offset="0" max-vertical-offset="2310">
-          <caret line="141" column="57" selection-start-line="141" selection-start-column="57" selection-end-line="141" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/form_element.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.708333" vertical-offset="14317" max-vertical-offset="18915">
@@ -393,22 +385,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/form_wizard.html">
+    <entry file="file://$PROJECT_DIR$/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.44" vertical-offset="37763" max-vertical-offset="39240">
-          <caret line="2549" column="56" selection-start-line="2549" selection-start-column="56" selection-end-line="2549" selection-end-column="56" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-28.875" vertical-offset="522" max-vertical-offset="2205">
+          <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/endless/endless_wizard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6518106" vertical-offset="3168" max-vertical-offset="4245">
-          <caret line="258" column="9" selection-start-line="258" selection-start-column="9" selection-end-line="258" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3183" max-vertical-offset="4260">
+          <caret line="272" column="30" selection-start-line="272" selection-start-column="30" selection-end-line="272" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/form_wizard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9707887" vertical-offset="38078" max-vertical-offset="39330">
+          <caret line="2605" column="55" selection-start-line="2605" selection-start-column="55" selection-end-line="2605" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

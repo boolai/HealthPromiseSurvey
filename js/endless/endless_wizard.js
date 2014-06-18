@@ -2,6 +2,7 @@ $(function	()	{
 
     $('#nextStep1').attr('disabled',false);
     $('#nextStep1').removeClass('disabled');
+    $('#emailForm').hide();
 	//Form Wizard 1
 	var currentStep_1 = 1;
 	
@@ -269,7 +270,7 @@ function finalMsg() {
         //I got even
         var pin = Math.floor(Math.random()*90000) + 10000;
         $('#finalMessage').html("You are the chosen one! Here is your pin =>" + pin);
-
+        $('#emailForm').show();
     } else {
         //I got even
         $('#finalMessage').html("Thank you for participating");
