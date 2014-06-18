@@ -15,14 +15,16 @@
 	
 	<!-- Endless -->
 	<link href="css/endless.min.css" rel="stylesheet">
-	
+
+      <!-- Datepicker -->
+      <link href="css/datepicker.css" rel="stylesheet"/>
   </head>
 
   <body>
 	<div class="login-wrapper">
 		<div class="text-center">
 			<h2 class="fadeInUp animation-delay10" style="font-weight:bold">
-				<span class="text-success">Endless</span> <span style="color:#ccc; text-shadow:0 1px #fff">Admin</span>
+				<span class="text-success">Health</span> <span style="color:#ccc; text-shadow:0 1px #fff">Promise</span>
 			</h2>
 	    </div>
 		<div class="login-widget animation-delay1">	
@@ -31,26 +33,34 @@
 					<i class="fa fa-plus-circle fa-lg"></i> Sign up
 				</div>
 				<div class="panel-body">
-					<form class="form-login">
+					<form class="form-login" action="form_wizard.html" method="POST">
 						<div class="form-group">
-							<label>Username</label>
-							<input type="text" placeholder="Username" class="form-control input-sm bounceIn animation-delay2" >
+                            <span class="fa fa-user fa-lg"></span>
+							<label>First Name</label>
+							<input type="text" placeholder="John" class="form-control input-sm bounceIn animation-delay2" name="firstName" required>
 						</div><!-- /form-group -->
 						<div class="form-group">
-							<label>Password</label>
-							<input type="password" placeholder="Password" class="form-control input-sm bounceIn animation-delay3">
+                            <span class="fa fa-user fa-lg"></span>
+							<label>Last Name</label>
+							<input type="text" placeholder="Doe" class="form-control input-sm bounceIn animation-delay3" name="lastName" required>
 						</div><!-- /form-group -->
 						<div class="form-group">
-							<label>Confirm Password</label>
-							<input type="text" placeholder="Confirm password" class="form-control input-sm bounceIn animation-delay4">
+                            <label> <i class="fa fa-gift fa-lg"></i> Birthday</label>
+                            <input type="date" name="birthday" placeholder="01/04/1971" class="form-control input-sm bounceIn animation-delay5" required>
 						</div><!-- /form-group -->
 						<div class="form-group">
+                            <span class="fa fa-envelope-o fa-lg"></span>
 							<label>Email Address</label>
-							<input type="text" placeholder="Email address" class="form-control input-sm bounceIn animation-delay5">
+							<input type="text" placeholder="me@you.com" class="form-control input-sm bounceIn animation-delay5" name="email" required>
 						</div><!-- /form-group -->
+                        <div class="form-group">
+                            <span class="fa fa-phone fa-lg"></span>
+                            <label>Telephone/CellPhone</label>
+                            <input type="tel" placeholder="555-555-5555" class="form-control input-sm bounceIn animation-delay5" name="telephone" required>
+                        </div><!-- /form-group -->
 						<div class="form-group">
 							<label class="label-checkbox">
-								 <input type="checkbox"/>
+								 <input type="checkbox" required/>
 								 <span class="custom-checkbox info bounceIn animation-delay6"></span>
 								 I accept the agreement.
 							</label>
@@ -65,8 +75,24 @@
 							
 						<hr/>
 						<div class="form-group">
-							<div class="controls text-right">
-								<a class="btn btn-success btn-sm bounceIn animation-delay7 login-link" href="login.html"><i class="fa fa-plus-circle"></i> Sign up</a>
+							<div class="controls text-center">
+
+                                <button type="button" class="btn btn-danger btn-lg" id="cancelBtn">
+                                    Cancel <span class="fa fa-sign-out fa-lg"></span>
+                                </button>
+                                <span>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    &nbsp;&nbsp;
+                                </span>
+
+                                <button type="submit" class="btn btn-success btn-lg">
+                                    Save <span class="fa fa-sign-in fa-lg"></span>
+                                </button>
+
+
 							</div>
 						</div><!-- /form-group -->
 					</form>
@@ -90,8 +116,11 @@
 	
 	<!-- Pace -->
 	<script src='js/pace.min.js'></script>
-	
-	<!-- Popup Overlay -->
+
+    <!-- Datepicker -->
+    <script src='js/bootstrap-datepicker.min.js'></script>
+
+    <!-- Popup Overlay -->
 	<script src='js/jquery.popupoverlay.min.js'></script>
 	
 	<!-- Slimscroll -->
@@ -102,5 +131,18 @@
 
 	<!--Endless-->
 	<script src="js/endless/endless.js"></script>
+
+    <script>
+
+
+        $("#cancelBtn").click(function() {
+            $(this).closest('form').find("input[type=text], textarea").val("");
+            $(this).closest('form').find("input[type=email], textarea").val("");
+            $(this).closest('form').find("input[type=tel], textarea").val("");
+            $(this).closest('form').find("input[type=date], textarea").val("");
+        });
+
+
+    </script>
   </body>
 </html>

@@ -1,13 +1,54 @@
 $(function	()	{
 
+    $('#nextStep1').attr('disabled',false);
+    $('#nextStep1').removeClass('disabled');
 	//Form Wizard 1
 	var currentStep_1 = 1;
 	
 	//Form Wizard 2
 	var currentStep_2 = 1;
 	
-	$('.wizard-demo li a').click(function()	{
-		alert('You must enter your information')
+	$('.wizard-demo li').click(function()	{
+
+        //Grab the index if the li
+        var str = $(this).index();
+
+		if(str >= ( currentStep_1 -1) ) {
+            alert("Please enter all required data");
+            return false;
+        } else {
+            currentStep_1--;
+            var next = currentStep_1 -1;
+            var num = $( "#wizardDemo1 li" ).length;
+            var percentage = (currentStep_1 / num) * 100;
+
+            if(currentStep_1 == 1) {
+                $('#prevStep1').addClass('disabled');
+                $('#prevStep1').attr('disabled',true);
+            } else if(currentStep_1 >= num) {
+
+                currentStep_1 = num;
+                $('#nextStep1').attr('disabled',true);
+                $('#nextStep1').add('disabled');
+
+            }
+            else {
+                $('#prevStep1').attr('disabled',false);
+                $('#prevStep1').removeClass('disabled');
+
+                $('#nextStep1').attr('disabled',false);
+                $('#nextStep1').removeClass('disabled');
+
+
+            }
+
+            $('#wizardDemo1 li:eq(' + next  + ') a').tab('show');
+            $('#wizardProgress').css("width",percentage + '%');
+
+            if(currentStep_1 == num) {
+                finalMsg();
+            }
+        }
 		return false;
 	});
 	 
@@ -96,7 +137,9 @@ $(function	()	{
                 $('#wizardDemo1 li:eq(' + next  + ') a').tab('show');
                 $('#wizardProgress').css("width",percentage + '%');
 
-
+                if(currentStep_1 == num) {
+                    finalMsg();
+                }
 
                 /*
 
@@ -212,3 +255,24 @@ $(function	()	{
 		return false;
 	});
 });
+
+function finalMsg() {
+    //get a random number
+    var  num = Math.floor(Math.random() * (0 - 10 + 1)) + 1;
+    var dem = Math.floor(Math.random() * (0 - 10 + 1)) + 1;
+
+    num = Math.abs(num);
+    dem = Math.abs(dem);
+    var m = num % dem;
+    var msg = "";
+    if(m == 0) {
+        //I got even
+        var pin = Math.floor(Math.random()*90000) + 10000;
+        $('#finalMessage').html("You are the chosen one! Here is your pin =>" + pin);
+
+    } else {
+        //I got even
+        $('#finalMessage').html("Thank you for participating");
+    }
+
+}
