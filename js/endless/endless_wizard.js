@@ -108,8 +108,8 @@ $(function	()	{
 			return false;
 		},
         onFormSubmit: function ( isFormValid, event ) {
+
             if(isFormValid)	{
-					
 				currentStep_1++;
                 var next = currentStep_1 -1;
                 var num = $( "#wizardDemo1 li" ).length;
@@ -140,6 +140,21 @@ $(function	()	{
 
                 if(currentStep_1 == num) {
                     finalMsg();
+                    var questions = $('label');
+                    var output ="<p>";
+                    var inp = null;
+                    for (var i = 0; i < questions.length; i++) {
+                    	inp = questions[i].find('input');
+                    	/*
+                    	if(questions[i].find("input")) {
+
+                    	}
+                    	*/
+                    	output += '<br/>' + questions[i].innerText + '<br/>';
+                    };
+                    output += '<br/><br/>Please print out and submit to your Health Care provider</p>';
+                    $('#output').html(output);
+                    //printOut();
                 }
 
                 /*
@@ -171,6 +186,7 @@ $(function	()	{
 			return false;
 		},
         onFormSubmit: function ( isFormValid, event ) {
+
             if(isFormValid)	{
 					
 				currentStep_2++;
@@ -197,7 +213,6 @@ $(function	()	{
     }});
 	
 	$('#prevStep1').click(function()	{
-		
 		currentStep_1--;
         var num = $( "#wizardDemo1 li" ).length;
 		var per = ( currentStep_1 / num) * 100;
