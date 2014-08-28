@@ -141,16 +141,17 @@ $(function	()	{
                 if(currentStep_1 == num) {
                     finalMsg();
                     var questions = $('label');
+                    console.log(questions);
                     var output ="<p>";
-                    var inp = null;
+                    var answer = null;
                     for (var i = 0; i < questions.length; i++) {
-                    	inp = questions[i].find('input');
-                    	/*
-                    	if(questions[i].find("input")) {
-
-                    	}
-                    	*/
-                    	output += '<br/>' + questions[i].innerText + '<br/>';
+                        var answer = $(questions[i]).find('input').is(':checked');
+                        if($(questions[i]).hasClass('col-lg-2 control-label')) {
+                            output += '<br/>Question ' + questions[i].innerText + '<br/>';
+                        } else if(answer != false) {
+                            output += '<br/> answer:' + questions[i].innerText + '<br/><br/>';
+                        }
+                    	answer = false;
                     };
                     output += '<br/><br/>Please print out and submit to your Health Care provider</p>';
                     $('#output').html(output);
